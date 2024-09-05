@@ -15,7 +15,7 @@ const router = Router();
 router.route("/").get(authenticateUser, getUsers);
 router
   .route("/:id")
-  .get(authenticateUser, getUser)
+  .get(getUser)
   .delete(authenticateUser, authorizeRoles("super_admin"), deleteUser)
   .patch(authenticateUser, authorizeRoles("super_admin"), updateUser);
 
