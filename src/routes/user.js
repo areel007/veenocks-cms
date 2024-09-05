@@ -12,7 +12,7 @@ import {
 
 const router = Router();
 
-router.route("/").get(authenticateUser, getUsers);
+router.route("/").get(getUsers);
 router
   .route("/:id")
   .get(getUser)
