@@ -42,7 +42,7 @@ export const addMedia = [
 
 export const getMedia = async (req, res) => {
   try {
-    const media = await Media.find();
+    const media = await Media.find().sort({ createdAt: -1 });
     res.status(200).json({ message: "media fetched successfully", media });
   } catch (error) {
     res.status(500).json({ message: "internal server error" });
