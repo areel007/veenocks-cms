@@ -18,6 +18,6 @@ router.route("/form-input").post(addFormInput).get(getFormInput);
 
 router.route("/form-input/download-csv").get(downloadCSV);
 
-router.route("form-input/delete-all").delete(deleteAllFormInput);
+router.route("/form-input/delete-all").delete(deleteAllFormInput);
 
 export default router;
