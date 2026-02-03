@@ -32,7 +32,7 @@ export const updateAboutUs = async (req, res) => {
     const aboutUs = await AboutUs.findOneAndUpdate(
       { _id: req.params.id },
       { fromEarth, ourVision, background },
-      { new: true }
+      { new: true },
     );
     res.status(200).json({
       message: "about us updated successfully",
